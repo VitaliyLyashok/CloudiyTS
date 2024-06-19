@@ -1,0 +1,36 @@
+@import "styles/_mixins-flex.scss";
+
+.fileFilterSidebar {
+  display: flex;
+  width: 15%;
+  box-sizing: border-box;
+  height: 86vh;
+
+  .filterMenuWrapper {
+    width: 100%;
+
+    .fileManagementButtons {
+      @include flex-yCenter-xCenter;
+      padding-top: 80%;
+      
+    }
+
+    .navigation {
+      width: 100%;
+
+      .list {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .navigation {
+    width: 100%;
+
+    .list {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

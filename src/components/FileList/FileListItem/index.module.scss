@@ -1,0 +1,85 @@
+@import "styles/_mixins-flex.scss";
+
+.fileListItem {
+  @include flex-yCenter-xBetween;
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  border-bottom: 1.5px solid var(--secondary-color-gray);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 10px;
+  transition: 0.4s;
+  text-decoration: none !important;
+  color: #000000 !important;
+
+  &:hover:not(:has(.btnGroup:hover)) {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+
+  &:first-child {
+    border-top: 1.5px solid var(--secondary-color-gray);
+  }
+  .fileAndIconWrapper {
+    @include flex-yCenter;
+
+    .fileFolderIconWrapper {
+      @include flex-yCenter;
+      color: var(--primary-color-blue);
+      padding-right: 10px;
+    }
+  }
+
+  .iconButtons {
+    @include flex-yCenter-xCenter-gap(10px);
+
+    .btnGroup {
+      @include flex-yCenter-xCenter;
+      width: 25px;
+      height: 25px;
+      border: none;
+      background-color: #f0f0f0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--secondary-color-gray);
+        transition: 0.4s;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .shareBtn {
+      color: darkorange;
+    }
+
+    .downloadBtn {
+      color: limegreen;
+    }
+
+    .noticedBtn {
+      color: var(--primary-color-blue);
+    }
+
+    .noticedBtnActive {
+      background-color: var(--primary-color-blue);
+      color: var(--primary-color-white);
+
+      &:hover {
+        background-color: #0d6eac;
+      }
+    }
+
+    .deleteBtn {
+      color: red;
+    }
+
+    .restoreBtn {
+      color: rgb(200, 0, 255);
+    }
+  }
+}

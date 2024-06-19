@@ -1,0 +1,68 @@
+@import "styles/_mixins-flex.scss";
+
+.header {
+  height: 8vh;
+  box-sizing: border-box;
+  @include flex-yCenter-xBetween;
+  border-bottom: 1.5px solid var(--primary-color-blue);
+  padding: 0 1.5%;
+
+  .logoAndTitle {
+    @include flex-yCenter-gap(10px);
+
+    .logo {
+      width: 60px;
+      height: 60px;
+    }
+
+    .title {
+      color: var(--primary-color-blue);
+    }
+  }
+
+  .fileSearch {
+    width: 50%;
+
+    .fileSearchInput {
+      width: 50%;
+      box-sizing: border-box;
+      border: 2px solid var(--secondary-color-gray);
+      border-radius: 6px;
+      font-size: 16px;
+      height: 36px;
+      padding: 0 1%;
+      outline: none;
+
+      &:hover {
+        border-color: var(--primary-color-blue);
+        transition: 0.4s;
+      }
+
+      &:focus {
+        border-color: var(--primary-color-blue);
+        transition: 0.4s;
+      }
+    }
+  }
+
+  .userInfo {
+    @include flex-yCenter-gap(10px);
+
+    .username {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .userAvatar {
+      @include flex-yCenter-xCenter;
+      background-color: var(--primary-color-blue);
+      color: var(--primary-color-white);
+      box-sizing: border-box;
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+      font-weight: 500;
+      border-radius: 50%;
+    }
+  }
+}

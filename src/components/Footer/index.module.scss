@@ -1,0 +1,9 @@
+@import "styles/_mixins-flex.scss";
+
+.footer{
+    @include flex-yCenter-xCenter;
+    height: 6vh;
+    box-sizing: border-box;
+    border-top: 1.5px solid var(--primary-color-blue);    
+    font-weight: 400;
+}
