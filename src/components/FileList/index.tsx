@@ -34,7 +34,6 @@ const FileList: FC<IProps> = ({ data, onToggleProperty, onFolderOpen, onDeleteFo
     });
   };
 
-  console.log("FileList")
 
   return (
     <>

@@ -40,7 +40,6 @@ const Header: FC<IHeaderProps> = ({
     }
   };
 
-  console.log("Header")
 
   return (
     <>

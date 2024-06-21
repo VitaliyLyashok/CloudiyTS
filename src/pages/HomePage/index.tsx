@@ -31,6 +31,7 @@ const Cloudiy: FC = () => {
   const navigate = useNavigate();
 
   const [userName, setUserName] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [userSpace, setUserSpace] = useState({
     spaceAvailable: 0,
     spaceUsed: 0,
@@ -136,7 +137,6 @@ const getFolderFiles = async (id: string | null) :Promise<IFilesData[]> => {
     const resultingData  = folders.concat(files);
     return resultingData;
   } catch (e) {
-    console.error(e);
     return [];
   }
 };
